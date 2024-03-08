@@ -1,0 +1,16 @@
+<div class="contenidor">
+    <button id="navegacio-tab-home" routerLinkActive="selected" [routerLinkActiveOptions]="{exact: true}" [routerLink]="['/home']" (click)="onTabClick($event.target)">
+        Home
+    </button>
+    <button id="navegacio-tab-experience" routerLinkActive="selected" [routerLinkActiveOptions]="{exact: true}" [routerLink]="['/experience']" (click)="onTabClick($event.target)">
+        Experience
+    </button>
+    <button id="navegacio-tab-projects" routerLinkActive="selected" [routerLinkActiveOptions]="{exact: true}" [routerLink]="['/projects']" (click)="onTabClick($event.target)">
+        Projects
+    </button>
+    
+    <div #pill class="pill"></div>
+    
+</div>
+
+<!-- Jordi Mas Parramon - xordimas@gmail.com - https://github.com/jordimas96 -->

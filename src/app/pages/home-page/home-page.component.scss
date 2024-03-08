@@ -1,0 +1,175 @@
+@import "src/styles.scss";
+
+// opacity: primary (87%), secondary (60%), tertiary (38%) //
+
+.group#bio {
+    .div-text {
+        align-self: center;
+    }
+
+    .div-foto {
+        overflow: hidden;
+        border-radius: 2rem;
+        transition: border-radius 0.3s;
+        -webkit-box-reflect: below 0px linear-gradient(to bottom, rgb(0 0 0 / 0%) 50%, rgb(0 0 0 / 15%));
+        width: 100%;
+        height: 33vw;
+        max-height: 300px;
+        background-color: var(--color-clar-50);
+
+        
+    }
+    .linies {
+        text-align: right;
+        & * {
+            transition: font-size 0.3s;
+        }
+
+        .bondia {
+            color: var(--text-60);
+        }
+        .nom {
+            color: var(--color-6);
+            .emdic {
+                color: var(--text-70);
+            }
+        }
+        .programador {
+            color: var(--text-70);
+            font-style: italic;
+        }
+    }
+    .bio {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .tempsExp {
+            cursor: pointer;
+            color: var(--color-7);
+            font-weight: bold;
+            display: inline-block;
+        }
+        
+        .boto {
+            padding: 0.9rem 1.1rem;
+            padding-left: 1.3rem !important;
+        }
+    }
+}
+::ng-deep html.light.matinada .nom,
+::ng-deep html.nit .nom { color: var(--text) !important }
+::ng-deep html.nit .tempsExp { color: var(--text); }
+::ng-deep html.nit .tempsExp,
+::ng-deep .light .tempsExp { font-weight: 900 !important; }
+
+
+.llenguatges {
+    .subtitle {
+        text-align: center;
+    }
+    .titol-tipus-llenguatge {
+        font-size: 1.4rem;
+        color: var(--text-80);
+        text-align: center;
+    }
+    .skills {
+        justify-content: center;
+    }
+}
+
+.seccioBotoVeureMes {
+    
+    .botoVeureMes {
+        display: inline;
+        font-size: 1.6rem;
+
+        i {
+            display: block;
+            transition: transform 0.3s;
+        }
+
+        &:hover {
+            i {
+                transform: translateY(0.5rem);
+            }
+        }
+    }
+}
+
+// div#llenguatges * {
+//     transition: all 0.3s !important;
+// }
+
+
+// Tooltip //
+.tooltipExp {
+    position: relative;
+    user-select: none;
+
+    > div {
+        visibility: hidden;
+        position: absolute;
+        width: max-content;
+        padding: 0.3rem 0.8rem;
+        margin-left: -0.8rem;
+        margin-top: 5px;
+        border-radius: 0.7rem;
+        background-color: var(--text);
+        color: var(--fons);
+        font-weight: normal;
+
+        @extend .shadow-2;
+
+        &::after {
+            content: " ";
+            position: absolute;
+            bottom: 100%;
+            left: 50%;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: transparent transparent var(--text) transparent;
+          }
+    }
+    &:hover > div { visibility: visible; }
+}
+
+
+// PC //
+@media (pointer: fine) { }
+// Mòbil //
+@media (pointer: coarse) { }
+
+// Pantalla PC //
+@media only screen and (min-width: 576px) {
+    .bondia {
+        font-size: 1.8rem;
+    }
+    .nom {
+        font-size: 1.7rem;
+        .emdic {
+            font-size: 1.4rem;
+        }
+    }
+    .programador {
+        font-size: 1.2rem;
+    }
+}
+// Pantalla Mòbil //
+@media only screen and (max-width: 575px) {
+    .bondia {
+        font-size: 1.5rem;
+    }
+    .nom {
+        font-size: 1.25rem;
+        .emdic {
+            position: relative;
+            top: 0.5rem;
+            font-size: 1.1rem;
+        }
+    }
+    .programador {
+        font-size: 0.9rem;
+    }
+}

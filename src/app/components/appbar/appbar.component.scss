@@ -1,0 +1,135 @@
+@import "src/styles.scss";
+
+.appbar {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    top: 0rem;
+    left: 0rem;
+    right: 0rem;
+    z-index: 1000;
+    background: none;
+    backdrop-filter: blur(20px) saturate(1.5);
+    transition: box-shadow 0.3s;
+
+    &:not(.scrolled) {
+        // background: var(--fons-50);
+        backdrop-filter: blur(20px) saturate(1);
+    }
+
+    .botonsDarkMode {
+        display: flex;
+        align-items: center;
+        padding: 0.6rem 0.5rem;
+        transition: padding 0.3s ;
+
+        .botoDarkMode, .botoAutoMode {
+            background-color: var(--text);
+            color: var(--fons);
+            font-weight: 800;
+            padding: initial; // iPhone/iPad fix //
+            border: none;
+            border-radius: 1000px;
+            outline: none;
+            cursor: pointer;
+            transition: background-color 0.3s linear, width 0.3s ease, height 0.3s ease, font-size 0.3s ease;
+            
+
+            &.transicio-1 {
+                transition: background-color 0.3s linear, width 0.3s ease, height 0.3s ease, font-size 0.3s ease, box-shadow 400ms ease-in;
+            }
+            &.transicio-2 {
+                transition: background-color 0.3s linear, width 0.3s ease, height 0.3s ease, font-size 0.3s ease, box-shadow 400ms ease-in;
+            }
+        }
+    }
+    
+    .navegacio {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        transition: padding 0.3s;
+    }
+
+    .idioma {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+
+        select.select-idioma {
+            background-color: var(--fons-50);
+            color: var(--text);
+            border: none;
+            border-radius: 5px;
+            padding: 0.25rem 0.5rem 0.25rem 1rem;
+            outline: none;
+            cursor: pointer;
+            transition: padding 0.3s, font-size 0.3s;
+
+            option {
+                background-color: var(--fons);
+            }
+        }
+    }
+}
+
+
+// Pantalla Gran //
+@media only screen and (min-width: 992px) {
+    .idioma .select-idioma {
+        padding-left: 2rem !important;
+        padding-right: 1.5rem !important;
+    }
+}
+// Pantalla PC //
+@media only screen and (min-width: 576px) {
+    .botonsDarkMode {
+        
+        .botoDarkMode, .botoAutoMode {
+            height: 3rem;
+            font-size: 1.3rem;
+        }
+        .botoDarkMode { width: 4rem; }
+        .botoAutoMode { width: 3rem; }
+    }
+    .navegacio {
+        padding: 0.5rem;
+    }
+    .idioma {
+        padding: 0.5rem;
+        .select-idioma {
+            font-size: 1.2rem;
+        }
+    }
+}
+// Pantalla Mòbil //
+@media only screen and (max-width: 575px) {
+    .botonsDarkMode {
+
+        .botoDarkMode, .botoAutoMode {
+            height: 2.5rem;
+            font-size: 1.1rem;
+        }
+        .botoDarkMode { width: 3.5rem; }
+        .botoAutoMode { width: 2.5rem; }
+    }
+    .navegacio {
+        padding: 0.25rem 0.5rem;
+    }
+    .idioma {
+        padding: 0.25rem 0.5rem;
+        .select-idioma {
+            font-size: 1.1rem;
+        }
+    }
+}
+
+// PC //
+@media (pointer: fine) { }
+// Mòbil //
+@media (pointer: coarse) {
+    .select-idioma {
+        border-radius: 0.6rem !important;
+    }
+}

@@ -1,0 +1,81 @@
+@import "src/styles.scss";
+
+.contenidor {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: var(--fons-50);
+    border-radius: 1.5rem; //1rem
+    margin: auto;
+    padding: 0.25rem;
+    z-index: 0;
+    transition: padding 0.3s;
+    
+    button {
+        background: none;
+        color: var(--text);
+
+        outline: none;
+        border: none;
+        cursor: pointer;
+
+        padding: 0.25rem 1rem;
+        z-index: 2;
+        border-radius: 1.5rem; //0.75rem
+
+        transition: font-size 0.3s, padding 0.3s, color 0.3s, background-color 0.1s;
+
+        &.selected {
+            color: var(--fons);
+        }
+    }
+    // button:not(.selected) + button:not(.selected) { border-left: 1px solid var(--text-50); } // Separadors //
+}
+
+.pill {
+    position: absolute;
+    background-color: var(--text);
+    border-radius: 1.5rem; //0.75rem
+    z-index: 1;
+}
+
+
+
+// Pantalla Gran //
+@media only screen and (min-width: 992px) {
+    button {
+        padding-left: 3rem !important;
+        padding-right: 3rem !important;
+    }
+}
+// Pantalla PC //
+@media only screen and (min-width: 576px) {
+    button {
+        font-size: 1.5rem;
+    }
+}
+// Pantalla Mòbil //
+@media only screen and (max-width: 575px) {
+    .contenidor {
+        padding: 0.2rem;
+    }
+    button {
+        font-size: 1.2rem;
+    }
+}
+
+// PC //
+@media (pointer: fine) {
+    .contenidor {
+        gap: 0.25rem;
+        
+        button {
+            &:hover {
+                background-color: var(--text-10) !important;
+            }
+        }
+    }
+}
+// Mòbil //
+@media (pointer: coarse) { }
