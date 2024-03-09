@@ -10,14 +10,14 @@ export class SettingsCardComponent {
 
     public mostrat = false;
 
-    constructor(public m: MainService) {
-        
-    }
+    constructor(public m: MainService) { }
 
     printSettings() {
         return JSON.stringify(this.m.nt_settings)
-            .replaceAll("{", "{\n")
+            .replaceAll("{", "{\n    ")
             .replaceAll("}", "\n}")
-            .replaceAll(",", ",\n")
+            .replaceAll(",", ",\n    ")
+            .replaceAll(":", ": ")
+            .replaceAll("\"", "")
     }
 }

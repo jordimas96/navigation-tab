@@ -2,36 +2,35 @@
     <div class="group shadow-4" [style.top.px]="m.u.getAlturaAppbar()" [class.mostrat]="mostrat" (click)="mostrat=true">
         <div class="titol mb-3">Navigation Tab Settings</div>
 
+        
+        
+        
         <div class="settings">
-            <div class="grup-settings row no-gutters mb-4">
-                <div class="titol col-12 col-md-6">Border radius:</div>
-                <input type="range" min="0" max="25" [(ngModel)]="m.nt_settings.borderRadius" class="col-12 col-md-6">
+            <div class="grup-settings row no-gutters mb-3">
+                <div class="titol col-12 col-md-6 mb-2">Border radius (px):</div>
+                <input type="range" min="0" [max]="m.esPantallaPc()?25:22" [(ngModel)]="m.nt_settings.borderRadius" class="col-12 col-md-6">
             </div>
-            <div class="grup-settings row no-gutters mb-4">
-                <div class="titol col-12 col-md-6">Width:</div>
-                <input type="range" min="0" max="500" [(ngModel)]="m.nt_settings.width" class="col-12 col-md-6">
+            <div class="grup-settings row no-gutters mb-3">
+                <div class="titol col-12 col-md-6 mb-2">Width (%):</div>
+                <input type="range" min="0" max="100" [(ngModel)]="m.nt_settings.width" class="col-12 col-md-6">
+            </div>
+            <div class="grup-settings row no-gutters mb-3">
+                <div class="titol col-12 col-md-12 mb-2">Themes:</div>
+                <div class="theme-buttons col-12 col-md-12">
+                    <button class="boto" [class.selected]="m.tema == 'matinada'" (click)="m.appbar.actTema('matinada')">Yellow</button>
+                    <button class="boto" [class.selected]="m.tema == 'mati'" (click)="m.appbar.actTema('mati')">Blue</button>
+                    <button class="boto" [class.selected]="m.tema == 'tarda'" (click)="m.appbar.actTema('tarda')">Orange</button>
+                    <button class="boto" [class.selected]="m.tema == 'vespre'" (click)="m.appbar.actTema('vespre')">Purple</button>
+                    <button class="boto" [class.selected]="m.tema == 'nit'" (click)="m.appbar.actTema('nit')">Black / White</button>
+                </div>
             </div>
         </div>
 
 
-        <span style="white-space: break-spaces;">{{printSettings()}}</span>
+        <span style="white-space: break-spaces; font-family: consolas, monospace;">{{printSettings()}}</span>
 
-        
-        <!-- <div>
-            <div>Dark mode</div>
-            <input type="range">
-        </div> -->
-        
-        <br>
-        Dark mode
-        <br>
-        options?
-        <br>
-        width
-        <br>
-        temes
-
-        
+        <!-- Dark mode -->
+        <!-- option list? -->
 
 
         <div class="botons">
@@ -39,6 +38,6 @@
         </div>
 
         <!-- Titol etiqueta desplegar -->
-        <div class="text-settings">Settings</div>
+        <div class="text-settings">Navigation Tab Settings</div>
     </div>
 <!-- </div> -->

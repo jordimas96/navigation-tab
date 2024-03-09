@@ -30,7 +30,7 @@ export class MainService {
     // NavigationTabSettings //
     public nt_settings = {
         borderRadius: 25,
-        width: 0,
+        width: 100,
     }
 
     constructor(
