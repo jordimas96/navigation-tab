@@ -6,6 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AppbarComponent } from './components/appbar/appbar.component';
 import { NavegacioTabComponent } from './components/appbar/navegacio-tab/navegacio-tab.component';
+import { SettingsCardComponent } from './components/settings-card/settings-card.component';
 import { ExperiencePageComponent } from './pages/experience-page/experience-page.component';
 import { HomePageComponent } from './pages/home-page/home-page.component';
 import { ProjectsPageComponent } from './pages/projects-page/projects-page.component';
@@ -17,6 +18,7 @@ import { ProjectsPageComponent } from './pages/projects-page/projects-page.compo
 
         // Components //
         AppbarComponent,
+        SettingsCardComponent,
         NavegacioTabComponent,
     
         // Pages //

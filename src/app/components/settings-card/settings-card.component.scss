@@ -1,0 +1,72 @@
+// .wrapper {
+//     position: fixed;
+//     inset: 0;
+//     z-index: 1000;
+//     // background-color: rgba(0, 106, 255, 0.192);
+//     backdrop-filter: blur(50px);
+
+    .group {
+        position: fixed;
+        // top: 50%;
+        // transform: translateY(-50%);
+        margin: 2rem;
+        padding: 2rem;
+        background-color: var(--color-3);
+        transition: transform 0.3s, border 0.3s;
+        transform: translateX(-100%);
+
+        &:not(.mostrat) {
+            border-radius: 2rem;
+            cursor: pointer;
+            // border-right: 3rem solid var(--color-5);
+            padding-right: 3rem;
+            button { opacity: 0 !important; }
+        }
+        &.mostrat {
+            transform: translateX(0);
+            .settings {
+                opacity: 0;
+                cursor: default;
+            }
+        }
+
+        .botons {
+            text-align: right;
+
+            .boto {
+
+            }
+        }
+    }
+// }
+
+.settings {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%) translateX(50%) rotate(90deg);
+    transform-origin: center;
+    padding-top: 1.8rem;
+    font-size: 1.2rem;
+    transition: font-size 0.3s, opacity 0.3s, padding-top 0.3s;
+}
+
+
+// Media queries //
+// Pantalla PC //
+@media only screen and (min-width: 576px) { }
+// Pantalla Mòbil //
+@media only screen and (max-width: 575px) { }
+// PC //
+@media (pointer: fine) {
+    .group:not(.mostrat):hover {
+        transform: translateX(-99%);
+
+        .settings {
+            padding-top: 2.5rem;
+            font-size: 2rem;
+        }
+    }
+}
+// Mòbil //
+@media (pointer: coarse) { }
