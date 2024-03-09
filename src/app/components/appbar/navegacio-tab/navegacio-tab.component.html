@@ -1,15 +1,36 @@
-<div class="contenidor">
-    <button id="navegacio-tab-home" routerLinkActive="selected" [routerLinkActiveOptions]="{exact: true}" [routerLink]="['/home']" (click)="onTabClick($event.target)">
+<div class="contenidor" [style.borderRadius.px]="m.nt_settings.borderRadius">
+    <button
+        id="navegacio-tab-home"
+        routerLinkActive="selected"
+        [routerLinkActiveOptions]="{exact: true}"
+        [routerLink]="['/home']"
+        (click)="onTabClick($event.target)"
+        [style.borderRadius.px]="m.nt_settings.borderRadius-4"
+    >
         Home
     </button>
-    <button id="navegacio-tab-experience" routerLinkActive="selected" [routerLinkActiveOptions]="{exact: true}" [routerLink]="['/experience']" (click)="onTabClick($event.target)">
+    <button
+        id="navegacio-tab-experience"
+        routerLinkActive="selected"
+        [routerLinkActiveOptions]="{exact: true}"
+        [routerLink]="['/experience']"
+        (click)="onTabClick($event.target)"
+        [style.borderRadius.px]="m.nt_settings.borderRadius-4"
+    >
         Experience
     </button>
-    <button id="navegacio-tab-projects" routerLinkActive="selected" [routerLinkActiveOptions]="{exact: true}" [routerLink]="['/projects']" (click)="onTabClick($event.target)">
+    <button
+        id="navegacio-tab-projects"
+        routerLinkActive="selected"
+        [routerLinkActiveOptions]="{exact: true}"
+        [routerLink]="['/projects']"
+        (click)="onTabClick($event.target)"
+        [style.borderRadius.px]="m.nt_settings.borderRadius-4"
+    >
         Projects
     </button>
     
-    <div #pill class="pill"></div>
+    <div #pill class="pill" [style.borderRadius.px]="m.nt_settings.borderRadius-4"></div>
     
 </div>
 

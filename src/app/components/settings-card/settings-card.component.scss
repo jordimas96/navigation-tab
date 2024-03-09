@@ -11,7 +11,14 @@
         // transform: translateY(-50%);
         margin: 2rem;
         padding: 2rem;
-        background-color: var(--color-3);
+
+        --fons: hsl(180, 100%, 16%) !important;
+        --fons-70: hsla(180, 100%, 16%, 0.7) !important;
+        --text: hsl(180, 100%, 89%) !important;
+        background-color: var(--fons-70);
+        color: var(--text);
+        accent-color: cyan;
+
         transition: transform 0.3s, border 0.3s;
         transform: translateX(-100%);
 
@@ -20,13 +27,31 @@
             cursor: pointer;
             // border-right: 3rem solid var(--color-5);
             padding-right: 3rem;
-            button { opacity: 0 !important; }
+
+            .titol, .settings, .boto {
+                filter: blur(20px) !important;
+                pointer-events: none;
+            }
         }
         &.mostrat {
             transform: translateX(0);
-            .settings {
+            .text-settings {
                 opacity: 0;
                 cursor: default;
+            }
+        }
+
+        > .titol {
+            font-size: 1.8rem;
+            transition: filter 0.3s;
+        }
+        .settings {
+            transition: filter 0.3s;
+
+            .grup-settings {
+                .titol {
+                    font-size: 1.3rem;
+                }
             }
         }
 
@@ -34,13 +59,17 @@
             text-align: right;
 
             .boto {
-
+                background-color: hsl(180, 100%, 72%);
+                transition: background-color 0.3s, filter 0.3s;
+                &:hover {
+                    background-color: hsl(180, 100%, 91%) !important;
+                }
             }
         }
     }
 // }
 
-.settings {
+.text-settings {
     position: absolute;
     top: 50%;
     right: 0;
@@ -54,16 +83,25 @@
 
 // Media queries //
 // Pantalla PC //
-@media only screen and (min-width: 576px) { }
+@media only screen and (min-width: 576px) {
+    .group {
+        min-width: 500px;
+    }
+}
 // Pantalla Mòbil //
-@media only screen and (max-width: 575px) { }
+@media only screen and (max-width: 575px) {
+    .group {
+        left: 0;
+        right: 0;
+    }
+}
 // PC //
 @media (pointer: fine) {
     .group:not(.mostrat):hover {
-        transform: translateX(-99%);
+        transform: translateX(calc(-100% + 4rem));
 
-        .settings {
-            padding-top: 2.5rem;
+        .text-settings {
+            padding-top: 6rem;
             font-size: 2rem;
         }
     }

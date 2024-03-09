@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
 import { MainService } from 'src/app/services/main.service';
 
 @Component({
@@ -8,7 +7,9 @@ import { MainService } from 'src/app/services/main.service';
 })
 export class PageComponent {
     
-    constructor(public m: MainService, public route: ActivatedRoute) { m.llegirParams(this.route); }
+    constructor(public m: MainService) {
+        
+    }
 
     async ngOnInit() {
         this.m.afterRootFadeIn(this.afterRootFadeIn.bind(this));

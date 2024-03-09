@@ -1,13 +1,44 @@
 <!-- <div class="wrapper" [style.top.px]="m.u.getAlturaAppbar()"> -->
     <div class="group shadow-4" [style.top.px]="m.u.getAlturaAppbar()" [class.mostrat]="mostrat" (click)="mostrat=true">
-        <div class="settings">Settings</div>
+        <div class="titol mb-3">Navigation Tab Settings</div>
 
-        Aliquam nec nisi euismod, luctus lorem non, eleifend ipsum. Nullam ipsum nunc, consectetur vel hendrerit quis, pretium in dolor. Suspendisse potenti. Nam egestas lectus sodales nunc rhoncus volutpat id quis nibh. Maecenas tincidunt nec dui non ultricies. Proin in consectetur felis, et cursus sem. Maecenas congue, eros vel luctus scelerisque, ante quam accumsan tortor, et porta est elit id neque. Cras consectetur mattis nibh, sit amet sodales eros laoreet ut. Vestibulum posuere tempor pulvinar. Duis efficitur ex sit amet nulla posuere placerat. In hac habitasse platea dictumst. Aenean at venenatis tortor, eu pharetra mi. Fusce mollis, lacus vitae fringilla efficitur, est enim aliquam arcu, vel pulvinar ligula augue eget lectus. Curabitur viverra consequat enim at tincidunt. Nam non ipsum dignissim, sagittis quam non, congue arcu. Pellentesque facilisis euismod posuere.
+        <div class="settings">
+            <div class="grup-settings row no-gutters mb-4">
+                <div class="titol col-12 col-md-6">Border radius:</div>
+                <input type="range" min="0" max="25" [(ngModel)]="m.nt_settings.borderRadius" class="col-12 col-md-6">
+            </div>
+            <div class="grup-settings row no-gutters mb-4">
+                <div class="titol col-12 col-md-6">Width:</div>
+                <input type="range" min="0" max="500" [(ngModel)]="m.nt_settings.width" class="col-12 col-md-6">
+            </div>
+        </div>
 
-        Nulla facilisi. Aenean eu dignissim ex, eget elementum felis. Nulla placerat mauris faucibus dolor hendrerit aliquet dictum id sapien. Ut aliquet tristique laoreet. Suspendisse in urna quis nisl pellentesque tristique ac ut nunc. Aenean luctus in sem ac interdum. Fusce iaculis viverra odio, porta consequat tellus tincidunt sit amet. Proin porttitor porta metus vel imperdiet. Ut efficitur turpis non arcu tempus, at euismod arcu lobortis. In rutrum at lacus porta vulputate. Nulla nec rutrum velit, ut tempus sem. Fusce sit amet magna id urna tempor pellentesque.
+
+        <span style="white-space: break-spaces;">{{printSettings()}}</span>
+
+        
+        <!-- <div>
+            <div>Dark mode</div>
+            <input type="range">
+        </div> -->
+        
+        <br>
+        Dark mode
+        <br>
+        options?
+        <br>
+        width
+        <br>
+        temes
+
+        
+
 
         <div class="botons">
             <button class="boto" (click)="mostrat=false; $event.stopPropagation();">Close</button>
         </div>
+
+        <!-- Titol etiqueta desplegar -->
+        <div class="text-settings">Settings</div>
     </div>
 <!-- </div> -->

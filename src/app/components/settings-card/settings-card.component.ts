@@ -14,4 +14,10 @@ export class SettingsCardComponent {
         
     }
 
+    printSettings() {
+        return JSON.stringify(this.m.nt_settings)
+            .replaceAll("{", "{\n")
+            .replaceAll("}", "\n}")
+            .replaceAll(",", ",\n")
+    }
 }
