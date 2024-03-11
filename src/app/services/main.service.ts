@@ -38,15 +38,9 @@ export class MainService {
         public route: ActivatedRoute,
         public gas: GoogleAnalyticsService
     ) {
-        this.u = Utils; // TODO: pendent de portar a dalt
+        this.u = Utils;
         
-        // Canviar icona NOMÉS al debugar //
-        if (this.debug) {
-            window["m"] = this;
-            document.title = "Local";
-            document.querySelector("link[rel*='icon']")!["href"] = "assets/favicon-local.png";
-            document.body.style.overflowX = "visible";
-        }
+        if (this.debug) window["m"] = this;
     }
     onInit() { }
 
