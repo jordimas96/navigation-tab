@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { ExperiencePageComponent } from './pages/experience-page/experience-page.component';
 import { HomePageComponent } from './pages/home-page/home-page.component';
 import { ProjectsPageComponent } from './pages/projects-page/projects-page.component';
+import { GenericPageComponent } from './pages/generic-page/generic-page.component';
 
 const routes: Routes = [
     {
@@ -24,7 +25,8 @@ const routes: Routes = [
     },
     {
         path: "**",
-        redirectTo: "home"
+        component: GenericPageComponent
+        // redirectTo: "home"
     },
 
 ];

@@ -4,11 +4,11 @@ import { MainService } from 'src/app/services/main.service';
 import { Utils } from 'src/app/shared/utils';
 
 @Component({
-    selector: 'app-navegacio-tab',
-    templateUrl: './navegacio-tab.component.html',
-    styleUrls: ['./navegacio-tab.component.scss']
+    selector: 'app-navigation-tab',
+    templateUrl: './navigation-tab.component.html',
+    styleUrls: ['./navigation-tab.component.scss']
 })
-export class NavegacioTabComponent {
+export class NavigationTabComponent {
 
     @ViewChild("pill") pill: ElementRef;
 

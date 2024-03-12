@@ -8,6 +8,7 @@
     .group {
         position: fixed;
         max-height: 75vh;
+        max-width: 88vw;
         margin: 2rem;
 
         background-color: hsla(180, 100%, 16%, 0.7);
@@ -25,7 +26,7 @@
             // border-right: 3rem solid var(--color-5);
             padding-right: 3rem;
 
-            .titol, .settings, .boto {
+            .titol, .settings, .print-settings, .boto {
                 filter: blur(20px) !important;
                 pointer-events: none;
             }
@@ -73,7 +74,16 @@
                         }
                     }
                 }
+                textarea {
+                    min-height: 66.22px;
+                    padding: 0 0.25rem;
+                }
             }
+        }
+
+        .print-settings {
+            font-family: consolas, monospace;
+            white-space: break-spaces;
         }
 
         .botons {
@@ -123,6 +133,10 @@
 
         > .titol {
             font-size: 1.6rem;
+        }
+
+        .print-settings {
+            display: none;
         }
     }
 }

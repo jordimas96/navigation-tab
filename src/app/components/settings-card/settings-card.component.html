@@ -24,17 +24,21 @@
                     <button class="boto" [class.selected]="m.tema == 'nit'" (click)="m.appbar.actTema('nit')">Black / White</button>
                 </div>
             </div>
+            <div class="grup-settings row no-gutters mb-3">
+                <div class="titol col-12 col-md-6 mb-2">Section list (Separated by commas):</div>
+                <textarea [(ngModel)]="m.nt_settings.sectionsString" class="col-12 col-md-6" (blur)="textareaModificat()"></textarea>
+            </div>
         </div>
 
 
-        <span style="white-space: break-spaces; font-family: consolas, monospace;">{{printSettings()}}</span>
+        <!-- <span class="print-settings">{{printSettings()}}</span> -->
 
+        
         <!-- Dark mode -->
-        <!-- option list? -->
 
 
         <div class="botons">
-            <button class="boto" (click)="mostrat=false; $event.stopPropagation();">Close</button>
+            <button class="boto" (click)="closeClick($event)">Close</button>
         </div>
 
         <!-- Titol etiqueta desplegar -->

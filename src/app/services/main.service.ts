@@ -31,6 +31,8 @@ export class MainService {
     public nt_settings = {
         borderRadius: 25,
         width: 100,
+        sectionsString: "home, experience, projects, products, services, explore, discover, gallery, community",
+        sections: ["home", "experience", "projects", "products", "services", "explore", "discover", "gallery", "community"],
     }
 
     constructor(
@@ -41,8 +43,14 @@ export class MainService {
         this.u = Utils;
         
         if (this.debug) window["m"] = this;
+
+        setTimeout(() => {
+            if (this.esPantallaMobil()) {
+                this.nt_settings.sectionsString = "home, experience, projects, discover, gallery";
+                this.nt_settings.sections = ["home", "experience", "projects", "discover", "gallery"];
+            }
+        }, 0);
     }
-    onInit() { }
 
 
     public log(t) { console.log(t); }
@@ -69,8 +77,5 @@ export class MainService {
             funcio();
         }, $("app-root").is(":visible") ? 0 : this.tempsDelayCarregaPag); // Retard fadein pagina //
     }
-
-
-    // Navigation Tab
 
 }

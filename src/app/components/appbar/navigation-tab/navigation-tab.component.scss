@@ -26,6 +26,8 @@
 
         transition: font-size 0.3s, padding 0.3s, color 0.3s, background-color 0.1s;
 
+        &:first-letter { text-transform: uppercase; }
+        
         &.selected {
             color: var(--fons);
         }

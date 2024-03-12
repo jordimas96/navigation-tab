@@ -1,6 +1,5 @@
 <div class="contenidor" [style.borderRadius.px]="m.nt_settings.borderRadius">
-    <button
-        id="navegacio-tab-home"
+    <!-- <button
         routerLinkActive="selected"
         [routerLinkActiveOptions]="{exact: true}"
         [routerLink]="['/home']"
@@ -10,7 +9,6 @@
         Home
     </button>
     <button
-        id="navegacio-tab-experience"
         routerLinkActive="selected"
         [routerLinkActiveOptions]="{exact: true}"
         [routerLink]="['/experience']"
@@ -20,7 +18,6 @@
         Experience
     </button>
     <button
-        id="navegacio-tab-projects"
         routerLinkActive="selected"
         [routerLinkActiveOptions]="{exact: true}"
         [routerLink]="['/projects']"
@@ -28,7 +25,19 @@
         [style.borderRadius.px]="m.nt_settings.borderRadius-4"
     >
         Projects
-    </button>
+    </button> -->
+    
+    @for (seccio of this.m.nt_settings.sections; track this.m.nt_settings.sections) {
+        <button
+            routerLinkActive="selected"
+            [routerLinkActiveOptions]="{exact: true}"
+            [routerLink]="['/'+seccio]"
+            (click)="onTabClick($event.target)"
+            [style.borderRadius.px]="m.nt_settings.borderRadius-4"
+        >
+            {{seccio}}
+        </button>
+    }
     
     <div #pill class="pill" [style.borderRadius.px]="m.nt_settings.borderRadius-4"></div>
     
