@@ -3,33 +3,13 @@
         {{url}}
     </div>
 
-
-    <div class="group mb-6">
-        <div class="subtitle mb-2">Curabitur porta</div>
-        <p class="text mb-1">
-            Nulla a erat dignissim, varius urna quis, viverra risus. Suspendisse malesuada nec magna a feugiat. Pellentesque lacinia tempus metus. Ut ex purus, cursus convallis dolor ut, condimentum pretium lacus. Nullam risus lacus, pretium in egestas a, dictum vitae velit. Nulla et leo quis justo posuere ullamcorper. Interdum et malesuada fames ac ante ipsum primis in faucibus.
-            <br>
-            <br>
-            Mauris odio tellus, efficitur id lorem quis, faucibus tincidunt dolor. Pellentesque lobortis est nec augue gravida hendrerit. Aenean elit velit, imperdiet non quam id, sodales consequat dolor. Aenean eleifend mollis ipsum, eget elementum justo eleifend quis. Mauris quis tincidunt sem. Praesent eget nulla auctor, fringilla lectus in, ornare nulla. Morbi eu erat mi. Nam ac porta nunc, dictum tincidunt arcu. Proin lectus nulla, vestibulum vel accumsan vitae, tempor eu nunc. Aliquam vel nunc rutrum diam auctor viverra vel egestas mauris. Nulla facilisi. In libero tortor, finibus a velit nec, maximus sollicitudin enim. Maecenas euismod ut sapien ut tempus. Aliquam semper turpis sed porttitor dapibus.
-        </p>
-    </div>
-
-
-    <div class="group mb-6">
-        <div class="subtitle mb-2">Duis eleifend</div>
-        <p class="text mb-1">
-            In nunc arcu, cursus quis euismod id, tristique sit amet est. Nunc sed elementum elit. Praesent odio orci, facilisis tincidunt tristique at, suscipit id libero. Maecenas vestibulum risus nec diam dignissim, sed consequat dui consequat. Curabitur accumsan commodo ligula ac cursus. Phasellus ac sagittis eros, quis interdum augue. Vestibulum commodo mattis velit, in congue velit. Pellentesque tincidunt finibus dolor, sit amet rutrum lorem tincidunt sed. Pellentesque semper a lacus id tempus. Cras et massa scelerisque, faucibus velit vitae, consequat metus. Ut fermentum neque id lorem scelerisque finibus. Quisque non lectus ac mauris mattis convallis. Aliquam facilisis est lectus, nec dictum mauris mollis ut. Aliquam tincidunt tincidunt sem, eu molestie sem auctor et. Donec ornare volutpat varius. Vestibulum nec gravida augue.
-            <br>
-            <br>
-            Duis porta egestas massa eu imperdiet. Nulla vitae massa ac risus bibendum cursus nec et augue. Sed pulvinar ut sem quis tempor. Donec porta ac turpis quis porta. Aliquam auctor, ex vel pharetra pretium, erat eros vulputate justo, vitae iaculis urna metus vitae mauris. Donec interdum mauris vel commodo interdum. Etiam ultrices lacus eu ex aliquam, sit amet pulvinar est vestibulum. Duis euismod est ac nisl condimentum imperdiet. Nam ex est, consequat sed sollicitudin non, facilisis sollicitudin nisl.
-            <br>
-            <br>
-            Aenean et arcu in tortor ultrices finibus in a dolor. Fusce sit amet quam neque. In hac habitasse platea dictumst. Integer egestas posuere sem, ut commodo nunc rhoncus vel. Maecenas tincidunt a arcu id ornare. Cras ac magna tellus. Phasellus ultrices nisi a nunc feugiat congue. In feugiat odio eget dolor pharetra, ac ultrices nunc maximus. Proin in interdum sem, id egestas nisl. Suspendisse fermentum posuere sapien, volutpat dapibus dolor condimentum nec. Sed nec lorem sodales, mattis sem blandit, hendrerit leo. Cras interdum orci sed sem dapibus, eget facilisis ex dapibus.
-            <br>
-            <br>
-            Aliquam non velit sollicitudin, gravida sem eget, molestie lectus. Nunc dignissim, metus elementum pharetra mollis, ligula dui congue ipsum, sed fermentum mauris est quis lectus. Vestibulum ut mauris venenatis, interdum nunc sed, pretium ipsum. Phasellus pellentesque tempus diam, quis ullamcorper leo gravida quis. Ut ullamcorper ipsum dolor, ut eleifend libero viverra maximus. Praesent eu nibh blandit, sodales massa vitae, efficitur nulla. Sed pretium velit urna, sed tincidunt metus dignissim nec. Vestibulum efficitur tortor sit amet euismod fringilla. Nam suscipit, tellus in laoreet venenatis, metus risus porttitor dolor, vel tristique magna felis vel ante. Proin maximus tortor ante, in ultricies urna posuere a. Nam vel est et risus condimentum cursus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Morbi maximus nibh a diam sagittis venenatis malesuada nec sapien. Aenean condimentum, augue non feugiat convallis, diam mauris ullamcorper justo, vel molestie arcu urna quis metus.
-        </p>
-    </div>
-
+    @for (post of posts; track post.titol) {
+        <div class="group mb-6">
+            <div class="subtitle mb-2">{{post.titol}}</div>
+            <p class="text mb-1">
+                {{post.text}}
+            </p>
+        </div>
+    }
 
 </div>
