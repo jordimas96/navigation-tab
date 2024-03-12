@@ -12,7 +12,7 @@
             </div>
             <div class="grup-settings row no-gutters mb-3">
                 <div class="titol col-12 col-md-6 mb-2">Width (%):</div>
-                <input type="range" min="0" max="100" [(ngModel)]="m.nt_settings.width" class="col-12 col-md-6">
+                <input type="range" min="20" max="100" [(ngModel)]="m.nt_settings.width" class="col-12 col-md-6">
             </div>
             <div class="grup-settings row no-gutters mb-3">
                 <div class="titol col-12 col-md-12 mb-2">Themes:</div>
@@ -27,6 +27,18 @@
             <div class="grup-settings row no-gutters mb-3">
                 <div class="titol col-12 col-md-6 mb-2">Section list (Separated by commas):</div>
                 <textarea [(ngModel)]="m.nt_settings.sectionsString" class="col-12 col-md-6" (blur)="textareaModificat()"></textarea>
+            </div>
+            <div class="grup-settings row no-gutters mb-3">
+                <div class="titol col-6" style="align-self:center;">Dark mode:</div>
+                <div class="botonsDarkMode col-6">
+                    <button (click)="animacioDarkMode('dark');" class="botoDarkMode" [title]="m.modeFosc ? 'Light mode' : 'Dark mode'">
+                        <i *ngIf="m.modeFosc" class="fa-solid fa-sun"></i>
+                        <i *ngIf="!m.modeFosc" class="fa-solid fa-moon"></i>
+                    </button>
+                    <!-- <button (click)="animacioDarkMode('auto');" class="botoAutoMode ml-1" title="Auto dark mode" style="display:none;">
+                        <i class="fa-solid fa-a"></i>
+                    </button> -->
+                </div>
             </div>
         </div>
 

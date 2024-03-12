@@ -15,7 +15,7 @@
         color: hsl(180, 100%, 89%);
         accent-color: cyan;
 
-        overflow: hidden;
+        // overflow: hidden;
 
         transform: translateX(-100%);
         transition: transform 0.3s, border 0.3s;
@@ -75,8 +75,40 @@
                     }
                 }
                 textarea {
-                    min-height: 66.22px;
+                    min-height: 70px;
                     padding: 0 0.25rem;
+                    overflow: hidden;
+                    border-radius: 0.5rem;
+                    background: inherit;
+                    backdrop-filter: brightness(0.5);
+                    color: inherit;
+                }
+            }
+            .botonsDarkMode {
+                display: flex;
+                align-items: center;
+                
+                transition: padding 0.3s;
+        
+                .botoDarkMode, .botoAutoMode {
+                    background-color: var(--text);
+                    color: var(--fons);
+                    font-weight: 800;
+                    padding: initial; // iPhone/iPad fix //
+                    border: none;
+                    border-radius: 1000px;
+                    outline: none;
+                    cursor: pointer;
+                    z-index: 10010px !important;
+                    transition: background-color 0.3s linear, width 0.3s ease, height 0.3s ease, font-size 0.3s ease;
+                    
+        
+                    &.transicio-1 {
+                        transition: background-color 0.3s linear, width 0.3s ease, height 0.3s ease, font-size 0.3s ease, box-shadow 400ms ease-in;
+                    }
+                    &.transicio-2 {
+                        transition: background-color 0.3s linear, width 0.3s ease, height 0.3s ease, font-size 0.3s ease, box-shadow 400ms ease-in;
+                    }
                 }
             }
         }
@@ -150,6 +182,25 @@
             font-size: 2rem;
         }
     }
+    .botonsDarkMode {
+        
+        .botoDarkMode, .botoAutoMode {
+            height: 3rem;
+            font-size: 1.3rem;
+        }
+        .botoDarkMode { width: 4rem; }
+        .botoAutoMode { width: 3rem; }
+    }
 }
 // Mòbil //
-@media (pointer: coarse) { }
+@media (pointer: coarse) {
+    .botonsDarkMode {
+
+        .botoDarkMode, .botoAutoMode {
+            height: 2.5rem;
+            font-size: 1.1rem;
+        }
+        .botoDarkMode { width: 3.5rem; }
+        .botoAutoMode { width: 2.5rem; }
+    }
+}
