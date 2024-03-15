@@ -41,7 +41,6 @@
                 padding-top: 1.3rem;
                 transform: translateX(-50%);
                 left: 50%;
-                width: max-content;
 
 
             }
@@ -150,12 +149,14 @@
 .text-settings {
     position: absolute;
     top: 50%;
-    right: 0;
-    transform: translateY(-50%) translateX(50%) rotate(90deg);
-    transform-origin: center;
+    left: 100%;
+    
+    width: max-content;
     padding-top: 1.8rem;
     font-size: 1.2rem;
-    transition: padding 0.3s, font-size 0.3s, transform 0.3s, top 0.3s;
+    transform: translateY(-50%) translateX(-50%) rotate(90deg);
+    transform-origin: center;
+    transition: padding 0.3s, font-size 0.3s, transform 0.3s, top 0.3s, left 0.3s;
 }
 
 
@@ -163,7 +164,7 @@
 // Pantalla PC //
 @media only screen and (min-width: 576px) {
     .group {
-        min-width: 500px;
+        min-width: 577px;
     }
 }
 // Pantalla Mòbil //
