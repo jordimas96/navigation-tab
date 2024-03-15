@@ -23,8 +23,6 @@
         &:not(.mostrat) {
             border-radius: 2rem;
             cursor: pointer;
-            // border-right: 3rem solid var(--color-5);
-            padding-right: 3rem;
 
             .titol, .settings, .print-settings, .boto {
                 filter: blur(20px) !important;
@@ -45,6 +43,26 @@
 
             }
         }
+
+        // .botoFletxa {
+        //     position: absolute;
+        //     top: 1.3rem; left: 1.3rem;
+        //     height: 2.5rem;
+        //     width: 3.5rem;
+        //     font-size: 1.5rem;
+        //     border-radius: 1.25rem;
+        //     border: none;
+        //     padding: 0;
+        //     background: none;
+        //     color: inherit;
+        //     z-index: 10;
+        //     background-color: hsl(180, 100%, 72%);
+        //     color: hsl(180, 100%, 16%) !important;
+
+        //     &:hover {
+        //         background-color: hsl(180, 100%, 91%) !important;
+        //     }
+        // }
 
         > .titol {
             font-size: 1.8rem;
