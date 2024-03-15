@@ -34,8 +34,16 @@
         &.mostrat {
             transform: translateX(0);
             .text-settings {
-                opacity: 0;
-                cursor: default;
+
+                top: 0;
+                font-size: 1.8rem;
+                text-align: center;
+                padding-top: 1.3rem;
+                transform: translateX(-50%);
+                left: 50%;
+                width: max-content;
+
+
             }
         }
 
@@ -43,6 +51,7 @@
             font-size: 1.8rem;
             text-align: center;
             transition: filter 0.3s;
+            opacity: 0;
         }
         .settings {
             transition: filter 0.3s;
@@ -146,7 +155,7 @@
     transform-origin: center;
     padding-top: 1.8rem;
     font-size: 1.2rem;
-    transition: font-size 0.3s, opacity 0.3s, padding-top 0.3s;
+    transition: padding 0.3s, font-size 0.3s, transform 0.3s, top 0.3s;
 }
 
 
