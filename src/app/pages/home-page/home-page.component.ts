@@ -18,6 +18,10 @@ export class HomePageComponent extends PageComponent {
 
     override afterRootFadeIn() {
         super.afterRootFadeIn();
+        
+        setTimeout(() => {
+            window.scroll(0, 240);
+        }, 100);
     }
     
 }

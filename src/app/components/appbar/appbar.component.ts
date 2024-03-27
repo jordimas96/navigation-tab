@@ -30,8 +30,6 @@ export class AppbarComponent {
     }
 
     afterRootFadeIn() {
-        
-
         $("body").css({ "transition": "background-position 0.3s" });
     }
 
