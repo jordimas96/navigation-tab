@@ -31,8 +31,8 @@ export class MainService {
     public nt_settings = {
         borderRadius: 25,
         width: 100,
-        sectionsString: "home, experience, projects, products, services, explore, discover, gallery, community",
-        sections: ["home", "experience", "projects", "products", "services", "explore", "discover", "gallery", "community"],
+        sectionsString: "home, experience, blog, products, feed, hub, innovation-integration, merchandising, accessibility",
+        sections: ["home", "experience", "blog", "products", "feed", "hub", "innovation-integration", "merchandising", "accessibility"],
     }
 
     constructor(
@@ -46,8 +46,8 @@ export class MainService {
 
         setTimeout(() => {
             if (this.esPantallaMobil()) {
-                this.nt_settings.sectionsString = "home, experience, projects, discover, gallery";
-                this.nt_settings.sections = ["home", "experience", "projects", "discover", "gallery"];
+                this.nt_settings.sectionsString = "home, experience, feed, projects, innovation-integration";
+                this.nt_settings.sections = ["home", "experience", "feed", "projects", "innovation-integration"];
             }
         }, 0);
     }
