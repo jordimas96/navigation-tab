@@ -32,7 +32,6 @@
             routerLinkActive="selected"
             [routerLinkActiveOptions]="{exact: true}"
             [routerLink]="['/'+seccio]"
-            (click)="onTabClick($event.target)"
             [style.borderRadius.px]="m.nt_settings.borderRadius-4"
         >
             {{seccio}}
